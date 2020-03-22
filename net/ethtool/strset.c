@@ -60,6 +60,11 @@ static const struct strset_info info_template[] = {
 		.count		= WOL_MODE_COUNT,
 		.strings	= wol_mode_names,
 	},
+	[ETH_SS_FEC_MODES] = {
+		.per_dev	= false,
+		.count		= ETHTOOL_FEC_MODE_COUNT,
+		.strings	= fec_mode_names,
+	},
 };
 
 struct strset_req_info {

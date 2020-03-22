@@ -203,6 +203,17 @@ const char wol_mode_names[][ETH_GSTRING_LEN] = {
 };
 static_assert(ARRAY_SIZE(wol_mode_names) == WOL_MODE_COUNT);
 
+
+const char fec_mode_names[][ETH_GSTRING_LEN] = {
+	[ETHTOOL_FEC_NONE_BIT]		= "None",
+	[ETHTOOL_FEC_AUTO_BIT]		= "Auto",
+	[ETHTOOL_FEC_OFF_BIT]		= "Off",
+	[ETHTOOL_FEC_RS_BIT]		= "RS",
+	[ETHTOOL_FEC_BASER_BIT]		= "BaseR",
+	[ETHTOOL_FEC_LLRS_BIT]		= "LLRS",
+};
+static_assert(ARRAY_SIZE(fec_mode_names) == ETHTOOL_FEC_MODE_COUNT);
+
 /* return false if legacy contained non-0 deprecated fields
  * maxtxpkt/maxrxpkt. rest of ksettings always updated
  */

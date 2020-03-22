@@ -596,6 +596,7 @@ struct ethtool_pauseparam {
  * @ETH_SS_LINK_MODES: link mode names
  * @ETH_SS_MSG_CLASSES: debug message class names
  * @ETH_SS_WOL_MODES: wake-on-lan modes
+ * @ETH_SS_FEC_MODES: FEC modes
  */
 enum ethtool_stringset {
 	ETH_SS_TEST		= 0,
@@ -610,6 +611,7 @@ enum ethtool_stringset {
 	ETH_SS_LINK_MODES,
 	ETH_SS_MSG_CLASSES,
 	ETH_SS_WOL_MODES,
+	ETH_SS_FEC_MODES,
 
 	/* add new constants above here */
 	ETH_SS_COUNT
@@ -1331,6 +1333,9 @@ enum ethtool_fec_config_bits {
 	ETHTOOL_FEC_RS_BIT,
 	ETHTOOL_FEC_BASER_BIT,
 	ETHTOOL_FEC_LLRS_BIT,
+
+	/* add new constants above here */
+	ETHTOOL_FEC_MODE_COUNT,
 };
 
 #define ETHTOOL_FEC_NONE		(1 << ETHTOOL_FEC_NONE_BIT)
